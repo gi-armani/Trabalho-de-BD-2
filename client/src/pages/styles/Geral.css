@@ -1,0 +1,48 @@
+.topo {
+    /* align-items: center; */
+    display: flex;
+    /* flex: 1; */
+    flex-direction: column;
+    /* align-items: space-between; */
+}
+
+.topo h1 {
+    position: relative;
+    top: 20px;
+}
+
+.botao-principal-container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.botaoPrincipal {
+    position: relative;
+    align-items: flex-end;
+    margin-left: 50%;
+    margin-top: -40px;
+    margin-bottom: -5px;
+    cursor: pointer;
+    /* z-index: 1; */
+}
+
+.botaoSecundario {
+    width: 100%;
+}
+
+.modal-container {
+    display: flex;
+    z-index: 2;
+}
+
+.modal-button-container {
+    display: flex;
+}
+
+.modal-button {
+    width: 10rem;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-top: 10px;
+}
