@@ -443,7 +443,7 @@ INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, T
 INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, Tutorial_id, Tutorial_nome) VALUES (2, 'Golab', 'Guimerlhe', 2, 'Como ficar milionario em uma semana');
 INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, Tutorial_id, Tutorial_nome) VALUES (3, 'Vilma', 'Lorena', 3, 'Instalando JDK no seu computador');
 INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, Tutorial_id, Tutorial_nome) VALUES (4, 'Daria', 'Imar', 4, 'Como tocar Unsaid Emily no ukelele');
-INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, Tutorial_id, Tutorial_nome) VALUES (5, 'Gabriela', 'Michele', 5, 'Como queimar chocolate no microondas');]
+INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, Tutorial_id, Tutorial_nome) VALUES (5, 'Gabriela', 'Michele', 5, 'Como queimar chocolate no microondas');
 INSERT INTO MINISTRA (Ministrante_id, Ministrante_nome, Ministrante_sobrenome, Tutorial_id, Tutorial_nome) VALUES (6, 'Gabriela', 'Michele', 6, 'Dicas para o mercado de trabalho');
 
 CREATE TABLE REUNIAO (
@@ -784,3 +784,25 @@ INSERT INTO INSCRICAO (Epoca, Taxa, Classe_do_Publico, Forma_de_Pagamento, Tipo,
 INSERT INTO INSCRICAO (Epoca, Taxa, Classe_do_Publico, Forma_de_Pagamento, Tipo, Evento_id, Evento_nome, Participante_id, Participante_nome, Participante_sobrenome) VALUES ('Inverno', 200, 'Standard', 'Dinheiro', 'Em lote', 1, 'Semana de SI', 20, 'Robertinho', 'Orvalho');
 INSERT INTO INSCRICAO (Epoca, Taxa, Classe_do_Publico, Forma_de_Pagamento, Tipo, Evento_id, Evento_nome, Participante_id, Participante_nome, Participante_sobrenome) VALUES ('Verao', 240, 'Premium', 'Cartao', 'Normal', 1, 'Semana de SI', 21, 'Clodoberto', 'Agnaldo');
 INSERT INTO INSCRICAO (Epoca, Taxa, Classe_do_Publico, Forma_de_Pagamento, Tipo, Evento_id, Evento_nome, Participante_id, Participante_nome, Participante_sobrenome) VALUES ('Inverno', 340, 'Standard', 'Boleto', 'Membro de sindicato', 1, 'Semana de SI', 22, 'Guirlanda', 'Golab');
+
+CREATE SEQUENCE evento_id_seq;
+
+ALTER TABLE evento
+ALTER id 
+SET DEFAULT NEXTVAL('evento_id_seq'); 
+
+ALTER SEQUENCE evento_id_seq
+MINVALUE 6
+START 6
+RESTART 6;
+
+CREATE SEQUENCE entidade_id_seq;
+
+ALTER TABLE entidade
+ALTER id 
+SET DEFAULT NEXTVAL('entidade_id_seq'); 
+
+ALTER SEQUENCE entidade_id_seq
+MINVALUE 6
+START 6
+RESTART 6;
